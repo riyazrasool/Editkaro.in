@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Editkaro.in: Professional video editing and social media marketing services">
+    <meta name="author" content="Editkaro.in">
+    <title>Editkaro - Creative Video Editing</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.webp">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <!-- Updated logo image -->
+                <img src="logo.webp" alt="Editkaro.in Logo" aria-label="Company logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <span class="material-icons">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-label="Hero Section">
+        <div class="hero-content">
+            <h2>Welcome to Editkaro.in</h2>
+            <p>Your one-stop solution for creative video editing and social media marketing</p>
+            <a href="#portfolio" class="hero-btn"> Project showcases</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section reveal" aria-label="Portfolio Section">
+        <h2>Our Creation</h2>
+        <div class="filters">
+            <button data-filter="all" class="filter-btn active" aria-controls="all">All</button>
+            <button data-filter="short-form" class="filter-btn" aria-controls="short-form">Short-form</button>
+            <button data-filter="long-form" class="filter-btn" aria-controls="long-form">Long-form</button>
+            <button data-filter="gaming" class="filter-btn" aria-controls="gaming">Gaming</button>
+            <button data-filter="MMA" class="filter-btn" aria-controls="MMA">MMA</button>
+            <button data-filter="anime" class="filter-btn" aria-controls="anime">Anime</button>
+        </div>
+
+        <div class="portfolio-container">
+            <article class="video-box" data-category="short-form" aria-label="Short-form Video">
+                <video src="videos/shortvideo.mp4" muted controls></video>
+                <div class="info">
+                    <h3>Short-form Video</h3>
+                    <p>Engaging videos for social media promotion.</p>
+                </div>
+            </article>
+            <article class="video-box" data-category="long-form" aria-label="Long-form Video">
+                <video src="videos/longvideo.mp4" muted controls></video>
+                <div class="info">
+                    <h3>Long-form Video</h3>
+                    <p>In-depth video storytelling.</p>
+                </div>
+            </article>
+            <article class="video-box" data-category="gaming" aria-label="Gaming Edit">
+                <video src="videos/gaming.mp4" muted controls></video>
+                <div class="info">
+                    <h3>Gaming Edit</h3>
+                    <p>Exciting, fast-paced gaming videos.</p>
+                </div>
+            </article>
+            <article class="video-box" data-category="MMA" aria-label="MMA Edit">
+                <video src="videos/MMA.mp4" muted controls></video>
+                <div class="info">
+                    <h3>MMA Edit</h3>
+                    <p>Action-packed MMA highlights.</p>
+                </div>
+            </article>
+            <article class="video-box" data-category="anime" aria-label="Anime Edit">
+                <video src="videos/animevideo.mp4" muted controls></video>
+                <div class="info">
+                    <h3>Anime Edit</h3>
+                    <p>Unique storytelling through anime.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing high-quality solutions tailored to your needs. Our mission is to drive innovation and excellence in every project.</p>
+        <div class="about-cards">
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Development</h3>
+                <p>Expertise in creating robust and scalable applications that drive business growth.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Design</h3>
+                <p>Innovative designs that enhance user experience and engagement.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Marketing</h3>
+                <p>Strategic marketing solutions that elevate your brand in the digital space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section reveal" aria-label="Contact Us">
+        <h2>Contact Us</h2>
+        <form id="contact-form" aria-label="Contact Form">
+            <input type="text" placeholder="Your Name" id="name" required aria-label="Your Name">
+            <input type="email" placeholder="Your Email" id="email" required aria-label="Your Email">
+            <textarea placeholder="Your Message" id="message" required aria-label="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Editkaro.in. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="mailto:youremail@example.com" target="_blank" aria-label="Email">
+                <span class="material-icons">email</span>
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                <span class="material-icons">instagram</span>
+            </a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+                <span class="material-icons">facebook</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        const toggleButton = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Animation Script -->
+    <script src="script.js"></script>
+</body>
+</html>
